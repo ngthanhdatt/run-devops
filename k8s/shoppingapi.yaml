@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
         - name: shoppingapi
-          image: mehmetozkaya/shoppingapi:latest
-          imagePullPolicy: IfNotPresent
+          image: ngthanhdat/shoppingapi:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
           env:
@@ -46,6 +46,6 @@ spec:
     app: shoppingapi
   ports:
     - protocol: TCP
-      port: 8000
+      port: 80
       targetPort: 80
       nodePort: 31000
